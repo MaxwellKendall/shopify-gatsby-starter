@@ -1,0 +1,21 @@
+.flex-col-center {
+    @apply flex flex-col items-center justify-center;
+}
+
+.default-pd-x {
+    @apply px-10;
+}
+
+.sqrl-purple {
+    background: $sqrl-purple;
+}
+.sqrl-pink {
+    background-color: $sqrl-pink;
+}
+.sqrl-grey {
+    background: $sqrl-background-color;
+}
+
+.sqrl-font-1 {
+    font-family: 'Nunito Sans', 'Nunito Sans Bold', 'Nunito Sans Italic', 'Nunito Sans Light';
+}

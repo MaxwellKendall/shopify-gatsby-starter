@@ -1,0 +1,64 @@
+{
+  "name": "shopify-gatsby-starter",
+  "private": true,
+  "description": "Simple shopify store using gatsby and tailwind",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop --host 0.0.0.0",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "postinstall": "npm run clean"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.3.12",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "autoprefixer": "^10.2.5",
+    "dotenv": "^8.2.0",
+    "gatsby": "^3.1.1",
+    "gatsby-image": "^3.1.0",
+    "gatsby-plugin-google-analytics": "^2.11.0",
+    "gatsby-plugin-google-tagmanager": "^2.11.0",
+    "gatsby-plugin-gtag": "^1.0.13",
+    "gatsby-plugin-manifest": "^2.12.1",
+    "gatsby-plugin-offline": "^3.10.2",
+    "gatsby-plugin-react-helmet": "^4.1.0",
+    "gatsby-plugin-recaptcha": "^1.0.5",
+    "gatsby-plugin-sass": "^4.1.0",
+    "gatsby-plugin-sharp": "^3.1.1",
+    "gatsby-source-filesystem": "^3.1.0",
+    "gatsby-source-shopify": "^4.1.0",
+    "gatsby-transformer-sharp": "^3.1.0",
+    "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "node-fetch": "^2.6.1",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.8",
+    "pure-react-carousel": "^1.27.6",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-image-magnify": "^2.7.4",
+    "react-modal": "^3.12.1",
+    "shopify-buy": "^2.11.0",
+    "tailwindcss": "^2.0.4"
+  },
+  "devDependencies": {
+    "prettier": "2.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MaxwellKendall/shopify-gatsby-starter"
+  },
+  "bugs": {
+    "url": "https://github.com/MaxwellKendall/shopify-gatsby-starter/issues"
+  }
+}

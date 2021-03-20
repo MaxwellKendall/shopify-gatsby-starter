@@ -1,0 +1,200 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+
+@import "tailwindcss/utilities";
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+
+@font-face {
+    font-family: 'Nunito Sans';
+    src: local("/fonts/Nunito_Sans/NunitoSans-Regular.ttf") format("ttf"),
+    url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+}
+@import "./vars";
+@import "./custom-utilities";
+
+// @font-face {
+//     font-family: 'Nunito Sans Bold';
+//     src: local("/fonts/Nunito_Sans/NunitoSans-Bold.tff") format("ttf");
+// }
+
+// @font-face {
+//     font-family: 'Nunito Sans Italic';
+//     src: local("/fonts/Nunito_Sans/NunitoSans-Regular.ttf") format("ttf");
+// }
+
+// @font-face {
+//     font-family: 'Nunito Sans Light';
+//     src: local("/fonts/Nunito_Sans/NunitoSans-Light.ttf") format("ttf");
+// }
+
+// @font-face {
+//     font-family: 'sans-serif';
+//     src: local("/fonts/Italianno/Italianno-Regular.ttf") format("ttf");
+// }
+
+@keyframes slide-in {
+    0% {
+      transform: translateY(-100vh);
+    }
+  
+    100% {
+      transform: translateY(0vh);
+    }
+}
+
+@keyframes slide-out {
+    0% {
+      transform: translateY(0vh);
+    }
+  
+    100% {
+      transform: translateY(-100vh);
+    }
+}
+
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper,
+.global-container {
+    min-height: 100vh;    
+    // Font defaults
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+    font-family: 'Nunito Sans', 'Nunito Sans Bold', 'Nunito Sans Italic', 'Nunito Sans Light';
+
+    .grecaptcha-badge {
+        visibility: hidden;
+    }
+
+    header {
+        .mobile-nav-opened {
+            animation: slide-in 0.195s ease-in;
+            top: 0;
+            bottom: 0;
+        }
+        .mobile-nav-closing {
+            animation: slide-out .225s ease-in;
+        }
+        .sqrl-active-link {
+            padding-bottom: .5rem;
+            border-bottom: 2px solid black;
+        }
+        .sqrl-active-link-shop {
+            border-bottom: 2px solid black;
+        }
+        .mobile-sqrl-active-link {
+            padding-bottom: .5rem;
+            border-bottom: 2px solid black;
+        }
+        .mobile-sqrl-active-link-shop {
+            border-bottom: 2px solid black;
+        }
+    }
+
+    .default-page {
+        svg .st0 {
+            fill:#FFFFFF;
+        }
+        &.home {
+            background: white;
+        }
+
+        .script-font {
+            font-family: 'Lora';
+        }
+        &.home {
+            h1,
+            h2,
+            h3,
+            p,
+            span,
+            a {
+                color: $sqrl-font-color;
+            }
+            .featured-work {
+                background-color: $sqrl-featured-work;
+            }
+            .hero-img {
+                height: 20rem;
+                @media(min-width: $tablet) {
+                    height: 25rem;
+                }
+                @media(min-width: $large) {
+                    height: 30rem;
+                }
+                @media(min-width: $huge-monitor) {
+                    height: 40rem;
+                }
+                // these styles work okay if there is no max-width on the page.
+                // @media(min-width: $large) {
+                //     height: 50rem;
+                // }
+                // @media(min-width: $monitor) {
+                //     height: 55rem;
+                // }
+                // @media(min-width: $huge-monitor) {
+                //     height: 65rem;
+                // }
+                // @media(min-width: $four-k-monitor) {
+                //     height: 75rem;
+                // }
+            }
+        }
+        .product-info {
+            transition: opacity .5s linear;
+        }
+        .grid-product-img:hover {
+            .product-info {
+                @apply opacity-75;
+            }
+        }
+        .commission-form {
+            background-color: $sqrl-pink;
+            input::placeholder {
+                color: black;
+            }
+        }
+        .checkout-button {
+            border: 2px solid $sqrl-purple;
+            color: black;
+        }
+        .overlay-product-img {
+            @media (min-width: $tablet) {
+                margin-top: 50%;
+            }
+        }
+    }
+    footer {
+        background: $sqrl-footer-background;
+        button {
+            background: #cdbdbd;
+        }
+    }
+    .cart-has-items {
+        & > span {
+            position: relative;
+            padding: 3px 8px;
+            border-radius: 40px;
+            font-size: 12px;
+            background: #cdbdbd;
+            font-weight: bold;
+            right: 35px;
+            bottom: 12px;
+            @media(min-width: $tablet) {
+                position: relative;
+                bottom: 35px;
+                padding: 3px 7px;
+                border-radius: 40px;
+                font-size: 12px;
+                background: #cdbdbd;
+                font-weight: bold;
+                right: 10px;
+            }
+        }
+    }
+}
